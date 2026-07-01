@@ -49,32 +49,38 @@ for `0 <= p <= 1`, where `μ` is the location parameter and `σ` is the scale pa
 
 <!-- /.intro -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/stats-base-dists-anglit-quantile
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var quantile = require( '@stdlib/stats-base-dists-anglit-quantile' );
+quantile = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-anglit-quantile@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var quantile = require( 'path/to/vendor/umd/stats-base-dists-anglit-quantile/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-anglit-quantile@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.quantile;
+})();
+</script>
 ```
 
 #### quantile( p, mu, sigma )
@@ -150,10 +156,15 @@ y = myQuantile( 0.9 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var uniform = require( '@stdlib/random-array-uniform' );
-var logEachMap = require( '@stdlib/console-log-each-map' );
-var quantile = require( '@stdlib/stats-base-dists-anglit-quantile' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-array-uniform@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/console-log-each-map@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/stats-base-dists-anglit-quantile@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var opts = {
     'dtype': 'float64'
@@ -163,6 +174,11 @@ var mu = uniform( 10, -5.0, 5.0, opts );
 var sigma = uniform( 10, 0.0, 5.0, opts );
 
 logEachMap( 'p: %lf, µ: %lf, σ: %lf, Q(p;µ,σ): %lf', p, mu, sigma, quantile );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -171,101 +187,7 @@ logEachMap( 'p: %lf, µ: %lf, σ: %lf, Q(p;µ,σ): %lf', p, mu, sigma, quantile 
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/stats/base/dists/anglit/quantile.h"
-```
-
-#### stdlib_base_dists_anglit_quantile( p, mu, sigma )
-
-Evaluates the [quantile function][quantile-function] for an [anglit][anglit-distribution] distribution with location parameter `mu` and scale parameter `sigma`.
-
-```c
-double out = stdlib_base_dists_anglit_quantile( 0.8, 0.0, 1.0 );
-// returns ~0.322
-```
-
-The function accepts the following arguments:
-
--   **p**: `[in] double` cumulative probability.
--   **mu**: `[in] double` location parameter.
--   **sigma**: `[in] double` scale parameter.
-
-```c
-double stdlib_base_dists_anglit_quantile( const double p, const double mu, const double sigma );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/stats/base/dists/anglit/quantile.h"
-#include <stdlib.h>
-#include <stdio.h>
-
-static double random_uniform( const double min, const double max ) {
-    double v = (double)rand() / ( (double)RAND_MAX + 1.0 );
-    return min + ( v*(max-min) );
-}
-
-int main( void ) {
-    double sigma;
-    double mu;
-    double p;
-    double y;
-    int i;
-
-    for ( i = 0; i < 10; i++ ) {
-        p = random_uniform( 0.0, 1.0 );
-        mu = random_uniform( -5.0, 5.0 );
-        sigma = random_uniform( 0.0, 5.0 );
-        y = stdlib_base_dists_anglit_quantile( p, mu, sigma );
-        printf( "p: %lf, µ: %lf, σ: %lf, Q(p;µ,σ): %lf\n", p, mu, sigma, y );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
