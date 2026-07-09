@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-07-01)
+## Unreleased (2026-07-09)
 
 <section class="features">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`112dcfc`](https://github.com/stdlib-js/stdlib/commit/112dcfcf5333be07ec3986193a011220762a0591) - **docs:** fix string interpolation and missing JSDoc annotations [(#13284)](https://github.com/stdlib-js/stdlib/pull/13284) _(by Philipp Burckhardt)_
 -   [`fe3bace`](https://github.com/stdlib-js/stdlib/commit/fe3bacee0706a1562d6654c859ce2644dc69ba56) - **bench:** add missing function documentation and ensure consistency with other benchmarks [(#13221)](https://github.com/stdlib-js/stdlib/pull/13221) _(by Philipp Burckhardt)_
 -   [`aebd92a`](https://github.com/stdlib-js/stdlib/commit/aebd92a2abde124cc3838fdfc2f2d88136eae9e2) - **feat:** add `stats/base/dists/anglit/quantile` [(#10716)](https://github.com/stdlib-js/stdlib/pull/10716) _(by Om-A-osc, Athan Reines, Neeraj Pathak, Philipp Burckhardt)_
 
