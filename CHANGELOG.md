@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-07-09)
+## Unreleased (2026-08-27)
 
 <section class="features">
 
@@ -22,6 +22,8 @@
 
 <details>
 
+-   [`8df3c50`](https://github.com/stdlib-js/stdlib/commit/8df3c505604130c2c0cdf20814d2126c9ef58e69) - **docs:** fix parameter descriptions and update spacing [(#13671)](https://github.com/stdlib-js/stdlib/pull/13671) _(by Philipp Burckhardt)_
+-   [`36ee366`](https://github.com/stdlib-js/stdlib/commit/36ee366130c07464017ccf0b49b9645a8f644a5f) - **chore:** clean-up [(#13539)](https://github.com/stdlib-js/stdlib/pull/13539) _(by Philipp Burckhardt)_
 -   [`112dcfc`](https://github.com/stdlib-js/stdlib/commit/112dcfcf5333be07ec3986193a011220762a0591) - **docs:** fix string interpolation and missing JSDoc annotations [(#13284)](https://github.com/stdlib-js/stdlib/pull/13284) _(by Philipp Burckhardt)_
 -   [`fe3bace`](https://github.com/stdlib-js/stdlib/commit/fe3bacee0706a1562d6654c859ce2644dc69ba56) - **bench:** add missing function documentation and ensure consistency with other benchmarks [(#13221)](https://github.com/stdlib-js/stdlib/pull/13221) _(by Philipp Burckhardt)_
 -   [`aebd92a`](https://github.com/stdlib-js/stdlib/commit/aebd92a2abde124cc3838fdfc2f2d88136eae9e2) - **feat:** add `stats/base/dists/anglit/quantile` [(#10716)](https://github.com/stdlib-js/stdlib/pull/10716) _(by Om-A-osc, Athan Reines, Neeraj Pathak, Philipp Burckhardt)_
