@@ -357,7 +357,7 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [quantile-function]: https://en.wikipedia.org/wiki/Quantile_function
 
-[anglit-distribution]: https://en.wikipedia.org/wiki/Anglit_distribution
+[anglit-distribution]: https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.anglit.html
 
 </section>
 
